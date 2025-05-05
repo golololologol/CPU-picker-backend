@@ -9,6 +9,7 @@ public class CpuRequest {
     private int tdp;
     private double priceEur;
     private Integer socketId;
+    private boolean available;
 
     public String getBrand() { return brand; }
     public void setBrand(String brand) { this.brand = brand; }
@@ -33,4 +34,7 @@ public class CpuRequest {
 
     public Integer getSocketId() { return socketId; }
     public void setSocketId(Integer socketId) { this.socketId = socketId; }
+
+    public boolean getAvailability() {return available;}
+    public void setAvailability(boolean available) {this.available = available;}
 }

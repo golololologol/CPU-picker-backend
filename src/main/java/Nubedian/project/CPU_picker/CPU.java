@@ -20,6 +20,7 @@ public class CPU {
     private int numberOfThreads;
     private int tdp;
     private double priceEur;
+    private boolean available;
 
     @ManyToOne
     @JoinColumn(name = "socket_id")
@@ -95,5 +96,13 @@ public class CPU {
 
     public void setSocket(Socket socket) {
         this.socket = socket;
+    }
+
+    public boolean getAvailability() {
+        return available;
+    }
+
+    public void setAvailability(boolean available) {
+        this.available = available;
     }
 }

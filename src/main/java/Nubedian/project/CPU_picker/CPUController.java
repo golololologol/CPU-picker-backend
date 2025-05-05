@@ -42,6 +42,7 @@ public class CPUController {
         cpu.setTdp(request.getTdp());
         cpu.setPriceEur(request.getPriceEur());
         cpu.setSocket(socket);
+        cpu.setAvailability(request.getAvailability());
         return cpuRepository.save(cpu);
     }
 
@@ -58,6 +59,7 @@ public class CPUController {
             cpu.setTdp(request.getTdp());
             cpu.setPriceEur(request.getPriceEur());
             cpu.setSocket(socket);
+            cpu.setAvailability(request.getAvailability());
             return cpuRepository.save(cpu);
         }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "CPU not found"));
     }
